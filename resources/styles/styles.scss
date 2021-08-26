@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+// Colors //
+// ------ //
+$primary-color:#03254E;
+$secondary-color:#c3e8f7;
+
+//  Mixins //
+// ------ //
+@mixin main-heading {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 2em;
+    font-weight: 600;
+
+}
+@mixin heading {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+@mixin sub-heading {
+    
+}
+@mixin paragraph {
+    padding: 10px;
+    font-size: 1em;
+}
+
+
+// General Styles //
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+// Fonts
+.main-heading {
+    @include main-heading();
+}
+.heading {
+    @include heading();
+}
+.paragraph{
+    @include paragraph();
+}
+
+
+// Styles
+body {
+    background-color: #03254E;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    font-family: Montserrat, sans-serif;
+
+    
+
+    #length-converter {
+        max-width: 70%;
+        // height: 600px;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px 20px;
+        margin: 50px auto 0 auto;
+        overflow: hidden;
+        .conv {
+            padding: 10px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            label {
+                display: block;
+                padding: 5px 0;
+
+            }
+
+            .conv-elem {
+                // padding-bottom: 10px;
+                margin: 0 10px;
+                padding: 5px 0;
+
+                input {
+                    padding: 10px;
+                    background-color: #c3e8f7;
+                    border-radius: 20px;
+                    border: 2px solid $primary-color;
+
+                }
+
+                input:focus {
+                    outline-width: 0;
+
+                }
+            }
+
+        }
+
+
+
+    }
+
+
+    @media only screen and (max-width: 600px) {
+        #unit-converter {
+            max-width: 80%;
+        }
+        font-size: 14px;
+
+        #length-converter{
+            max-width:90%;
+        }
+
+    }
+}
